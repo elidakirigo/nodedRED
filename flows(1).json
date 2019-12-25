@@ -1,0 +1,27 @@
+[
+    {
+        "id": "4174c3fe.ba32f4",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "b301cb53.477ab8",
+        "type": "inject",
+        "z": "4174c3fe.ba32f4",
+        "name": "CREATE feed",
+        "topic": "CREATE TABLE feed(name, id );",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 150,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    }
+]

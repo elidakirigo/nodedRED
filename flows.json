@@ -1,0 +1,1 @@
+[{"id":"7f7f2851.6a0358","type":"inject","z":"66cac6a4.1201e","name":"CREATE feed","topic":"CREATE TABLE feed(name, id );","payload":"","payloadType":"date","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":110,"y":120,"wires":[[]]}]
