@@ -1,0 +1,155 @@
+[
+    {
+        "id": "8cc194d6.f21978",
+        "type": "tab",
+        "label": "MQTT Flow",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "bc3d5111.3b82d",
+        "type": "mqtt out",
+        "z": "8cc194d6.f21978",
+        "name": "Outcoming Message",
+        "topic": "relayboard/relay1",
+        "qos": "",
+        "retain": "",
+        "broker": "e379ae9b.b946e",
+        "x": 380,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "f7004b48.5ee508",
+        "type": "ui_button",
+        "z": "8cc194d6.f21978",
+        "name": "",
+        "group": "9af192d1.efdd5",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "On",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "on",
+        "payloadType": "str",
+        "topic": "",
+        "x": 90,
+        "y": 200,
+        "wires": [
+            [
+                "bc3d5111.3b82d"
+            ]
+        ]
+    },
+    {
+        "id": "212e9ad5.061bb6",
+        "type": "ui_button",
+        "z": "8cc194d6.f21978",
+        "name": "",
+        "group": "9af192d1.efdd5",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Off",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "off",
+        "payloadType": "str",
+        "topic": "",
+        "x": 90,
+        "y": 260,
+        "wires": [
+            [
+                "97b41e83.9d93e"
+            ]
+        ]
+    },
+    {
+        "id": "97b41e83.9d93e",
+        "type": "mqtt out",
+        "z": "8cc194d6.f21978",
+        "name": "Outcoming Message",
+        "topic": "relayboard/relay1",
+        "qos": "",
+        "retain": "",
+        "broker": "e379ae9b.b946e",
+        "x": 380,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "a4b75224.b662e",
+        "type": "comment",
+        "z": "8cc194d6.f21978",
+        "name": "MQTT ESP Relay",
+        "info": "",
+        "x": 130,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "e65f15aa.d22228",
+        "type": "mosca in",
+        "z": "8cc194d6.f21978",
+        "mqtt_port": 1883,
+        "mqtt_ws_port": 8080,
+        "name": "",
+        "username": "",
+        "password": "",
+        "dburl": "",
+        "x": 150,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e379ae9b.b946e",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "Mosca MQTT Broker",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "9af192d1.efdd5",
+        "type": "ui_group",
+        "z": "",
+        "name": "Wireless Relay",
+        "tab": "7ac666a0.b718a8",
+        "order": 9,
+        "disp": true,
+        "width": "3",
+        "collapse": false
+    },
+    {
+        "id": "7ac666a0.b718a8",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Wireless",
+        "icon": "fa-wifi",
+        "disabled": false,
+        "hidden": false
+    }
+]
