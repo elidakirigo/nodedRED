@@ -1,0 +1,131 @@
+
+[
+    {
+        "id": "3ad513d.ebca66c",
+        "type": "ui_button",
+        "z": "3aa77a92.89f776",
+        "name": "clicked",
+        "group": "ebeb9189.79d028",
+        "order": 0,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "label": "go to ui page",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "home",
+        "payload": "1",
+        "payloadType": "num",
+        "topic": "",
+        "x": 730,
+        "y": 60,
+        "wires": [
+            [
+                "17a36bdf.f90684"
+            ]
+        ]
+    },
+    {
+        "id": "538c52e3.f81ccc",
+        "type": "inject",
+        "z": "3aa77a92.89f776",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 100,
+        "y": 60,
+        "wires": [
+            [
+                "4690af6b.b106d8"
+            ]
+        ]
+    },
+    {
+        "id": "7d4d214d.1adba8",
+        "type": "function",
+        "z": "3aa77a92.89f776",
+        "name": "window change",
+        "func": "msg.location=\"http://83.226.179.200:1880/home/\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 540,
+        "y": 60,
+        "wires": [
+            [
+                "3ad513d.ebca66c"
+            ]
+        ]
+    },
+    {
+        "id": "17a36bdf.f90684",
+        "type": "debug",
+        "z": "3aa77a92.89f776",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 930,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "4690af6b.b106d8",
+        "type": "switch",
+        "z": "3aa77a92.89f776",
+        "name": "ON/OFF state",
+        "property": "relay1",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 300,
+        "y": 60,
+        "wires": [
+            [
+                "7d4d214d.1adba8"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "ebeb9189.79d028",
+        "type": "ui_group",
+        "z": "",
+        "name": "HOME button",
+        "tab": "7c97f50f.554af4",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "7c97f50f.554af4",
+        "type": "ui_tab",
+        "z": "",
+        "name": "HOME",
+        "icon": "home",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
