@@ -1,0 +1,201 @@
+[
+    {
+        "id": "f68e2329.39e348",
+        "type": "uibuilder",
+        "z": "4e701953.94118",
+        "name": "",
+        "topic": "",
+        "url": "home",
+        "fwdInMessages": false,
+        "allowScripts": false,
+        "allowStyles": false,
+        "copyIndex": true,
+        "showfolder": false,
+        "x": 330,
+        "y": 100,
+        "wires": [
+            [
+                "c3efbac5.d1473",
+                "4cfd5df0.6d431c"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "2daa91ec.b7529e",
+        "type": "inject",
+        "z": "4e701953.94118",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 100,
+        "y": 100,
+        "wires": [
+            [
+                "f68e2329.39e348"
+            ]
+        ]
+    },
+    {
+        "id": "c3efbac5.d1473",
+        "type": "switch",
+        "z": "4e701953.94118",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "yes",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "no",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 590,
+        "y": 100,
+        "wires": [
+            [
+                "4cfd5df0.6d431c",
+                "eccbc85a.e4ddd"
+            ],
+            [
+                "bde9c80c.7f86d"
+            ]
+        ]
+    },
+    {
+        "id": "4cfd5df0.6d431c",
+        "type": "debug",
+        "z": "4e701953.94118",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 970,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "eccbc85a.e4ddd",
+        "type": "function",
+        "z": "4e701953.94118",
+        "name": "",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 850,
+        "y": 100,
+        "wires": [
+            [
+                "4cfd5df0.6d431c"
+            ]
+        ]
+    },
+    {
+        "id": "bde9c80c.7f86d",
+        "type": "function",
+        "z": "4e701953.94118",
+        "name": "",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 850,
+        "y": 160,
+        "wires": [
+            [
+                "4cfd5df0.6d431c"
+            ]
+        ]
+    },
+    {
+        "id": "c7b87fda.cad5f",
+        "type": "uibuilder",
+        "z": "4e701953.94118",
+        "name": "",
+        "topic": "",
+        "url": "ui",
+        "fwdInMessages": false,
+        "allowScripts": false,
+        "allowStyles": false,
+        "copyIndex": true,
+        "showfolder": false,
+        "x": 270,
+        "y": 240,
+        "wires": [
+            [
+                "15738601.ff443a"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "f4e0f5cf.9f4ee",
+        "type": "inject",
+        "z": "4e701953.94118",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "2",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "x": 130,
+        "y": 240,
+        "wires": [
+            [
+                "c7b87fda.cad5f",
+                "f357cab2.44b9f8"
+            ]
+        ]
+    },
+    {
+        "id": "15738601.ff443a",
+        "type": "debug",
+        "z": "4e701953.94118",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 440,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "f357cab2.44b9f8",
+        "type": "uibuilder",
+        "z": "4e701953.94118",
+        "name": "",
+        "topic": "",
+        "url": "u",
+        "fwdInMessages": false,
+        "allowScripts": false,
+        "allowStyles": false,
+        "copyIndex": true,
+        "showfolder": false,
+        "x": 270,
+        "y": 320,
+        "wires": [
+            [
+                "15738601.ff443a"
+            ],
+            []
+        ]
+    }
+]

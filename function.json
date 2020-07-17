@@ -1,0 +1,103 @@
+[
+    {
+        "id": "6c123328.5a7ae4",
+        "type": "inject",
+        "z": "4e701953.94118",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "num",
+        "repeat": "600",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "x": 130,
+        "y": 80,
+        "wires": [
+            [
+                "e0af696a.5d21e"
+            ]
+        ]
+    },
+    {
+        "id": "e0af696a.5d21e",
+        "type": "function",
+        "z": "4e701953.94118",
+        "name": "",
+        "func": "var data = 'welcome node';\nmsg.payload=data;\nmsg.data=1;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 330,
+        "y": 80,
+        "wires": [
+            [
+                "9845014e.e2252"
+            ]
+        ]
+    },
+    {
+        "id": "1cc15005.fc8ab8",
+        "type": "debug",
+        "z": "4e701953.94118",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 650,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "9845014e.e2252",
+        "type": "function",
+        "z": "4e701953.94118",
+        "name": "",
+        "func": "msg.payload = \"changed\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 450,
+        "y": 180,
+        "wires": [
+            [
+                "1cc15005.fc8ab8"
+            ]
+        ]
+    },
+    {
+        "id": "7fd0852b.218b84",
+        "type": "inject",
+        "z": "4e701953.94118",
+        "name": "",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "repeat": "240",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "x": 130,
+        "y": 280,
+        "wires": [
+            [
+                "934ecf53.bf028"
+            ]
+        ]
+    },
+    {
+        "id": "934ecf53.bf028",
+        "type": "debug",
+        "z": "4e701953.94118",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 370,
+        "y": 280,
+        "wires": []
+    }
+]
